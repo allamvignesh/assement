@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	axisX: {
+        gridThickness: 1,
+		minimum: 0,
+		maximum: 7.01,
+	},
+	axisY: {
+      	minimum: 0,
+		maximum: 100,
+		includeZero: true,
+      	gridThickness: 0,
+        tickLength: 0,
+        lineThickness: 1,
+        labelFormatter: function(){
+          return " ";
+        }
+	},
+	data: [{
+		indexLabelFontColor: "darkSlateGray",
+		name: "views",
+		type: "area",
+      	markerSize: 0,
+        lineThickness: 0,
+        color: "#5c9ce5",
+		dataPoints: [
+			{ x: 0, y: 23, label: "23%" },
+			{ x: 1, y: 29, label: "29%" },
+			{ x: 2, y: 58, label: "58%" },
+			{ x: 3, y: 75, label: "75%" },
+			{ x: 4, y: 33, label: "33%" },
+			{ x: 5, y: 20, label: "20%" },
+			{ x: 6, y: 73, label: "73%" },
+			{ x: 7, y: 49, label: "49%" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 100px; width: 100%;"></div>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>
