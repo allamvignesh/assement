@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B4D7FE;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+
+    background-color: #5C9CE5;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.buildings {
+    position: absolute;
+    height: 65%;
+    bottom: 0;
+}
+
+.buildings img {
+    width: 100%;
+    height: 100%;
+}
+
+.overview {
+    width: 25%;
+    padding: 1.75em;
+
+    color: #fff;
+}
+
+.mini_menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add_city {
+    width: 3em;
+    aspect-ratio: 1 / 1;
+
+    background-color: transparent;
+    border: none;
+}
+
+.add_city img {
+    width: 100%;
+    height: 100%;
+}
+
+.city_slider_button {
+    height: .75em;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 2em;
+    border: none;
+    background-color: #ffffff99;
+}
+
+.city_slider_button.active {
+    aspect-ratio: 2.5 / 1;
+    background-color: #fff;
+}
+
+
+.degree_slider {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.degree_slider span {
+    color: #ffffff99;
+}
+
+.degree_slider span.active {
+    color: #fff;
+}
+
+#degree_toggle {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.degree_toggle {
+    position: relative;
+    display: block;
+    text-indent: -9999px;
+    height: 1em;
+    aspect-ratio: 2 / 1;
+    background: #ffffff54;
+    border-radius: 100px;
+}
+  
+.degree_toggle:after {
+    content: '';
+    position: absolute;
+    height: 170%;
+    aspect-ratio: 1 / 1;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -20%);
+    transition: 0.3s;
+    background: #fff;
+    border-radius: 50%;
+}
+  
+#degree_toggle:checked + .degree_toggle:after {
+    left: 100%;
+}
+
+.location {
+    padding-block: 4em;
+}
+
+.location > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location img,
+.temperature img {
+    width: 1.7em;
+    padding-right: 0.3em;
+}
+
+.location h2 {
+    font-weight: 300;
+}
+
+.temperature {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.temperature h1 {
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.temperature button {
+    background: transparent;
+    border: none;
+    
+}
+
+
+
+
+
+
+
+.dashboard {
+    width: 75%;
+
+    --d_radius: 2em;
+    border-radius: var(--d_radius) 0 0 var(--d_radius);
+    background-color: #fff;
+}
