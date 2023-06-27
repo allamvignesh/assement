@@ -110,6 +110,7 @@ button {
     aspect-ratio: 2 / 1;
     background: #ffffff54;
     border-radius: 100px;
+    cursor: pointer;
 }
   
 .degree_toggle:after {
@@ -167,16 +168,36 @@ button {
     
 }
 
-
-
-
-
-
+.temperature p {
+    display: flex;
+}
 
 .dashboard {
     width: 75%;
 
+    padding: 1.75em;
+
     --d_radius: 2em;
     border-radius: var(--d_radius) 0 0 var(--d_radius);
-    background-color: #fff;
+    background-color: #E4F1FF;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome button {
+    background: transparent;
+    border: none;
+}
+
+.profile {
+    display: flex;
+    gap: 1.75em;
+}
+
+.profile_pic{
+    background: #5C9CE5;
+    border-radius: .75em;
 }
