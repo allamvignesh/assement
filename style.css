@@ -131,7 +131,7 @@ button {
 }
 
 .location {
-    padding-block: 4em;
+    padding-block: 3em;
 }
 
 .location > * {
@@ -185,6 +185,7 @@ button {
 .welcome {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 2em;
 }
 
 .welcome button {
@@ -200,4 +201,78 @@ button {
 .profile_pic{
     background: #5C9CE5;
     border-radius: .75em;
+}
+
+.temperature_graph {
+    padding: 1.75em;
+    background-color: #fff;
+    border-radius: 1.75em;
+}
+
+.temperature_graph .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temperature_graph .header div {
+    display: flex;
+}
+
+.temperature_graph .header button {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 1em;
+    padding-block: .25em;
+    padding-inline: 1em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    border-radius: 0.75em;
+    border: none;
+}
+
+.temperature_graph .header img {
+    height: 1em;
+}
+
+.temperature_graph .labels {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2em;
+}
+
+.temperature_graph .labels div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature_graph .labels img{
+    height: 2em;
+}
+
+.mychart {
+    display: flex;
+    justify-content: center;
+}
+
+.mychart div {
+    width: 99%;
+    padding-right: .5em;
+}
+
+.more_details {
+    padding-block: 1.75em;
+}
+
+.weather_detials {
+}
+
+.details_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details_row div {
+    background-color: #fff;
 }
