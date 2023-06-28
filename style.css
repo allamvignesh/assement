@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 * {
     padding: 0;
@@ -9,14 +9,12 @@
 body {
     background-color: #B4D7FE;
     font-family: 'Nunito', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
 }
 
 main {
     position: relative;
-    height: 100vh;
-
     display: flex;
 
     background-color: #5C9CE5;
@@ -29,8 +27,9 @@ button {
 
 .buildings {
     position: absolute;
-    height: 65%;
-    bottom: 0;
+    width: 65%;
+    left: 0;
+    bottom: -10px;
 }
 
 .buildings img {
@@ -39,8 +38,9 @@ button {
 }
 
 .overview {
+    position: relative;
     width: 25%;
-    padding: 1.75em;
+    padding: 1.5em;
 
     color: #fff;
 }
@@ -131,7 +131,7 @@ button {
 }
 
 .location {
-    padding-block: 3em;
+    padding-block: 2em;
 }
 
 .location > * {
@@ -175,7 +175,7 @@ button {
 .dashboard {
     width: 75%;
 
-    padding: 1.75em;
+    padding: 1.5em;
 
     --d_radius: 2em;
     border-radius: var(--d_radius) 0 0 var(--d_radius);
@@ -185,10 +185,10 @@ button {
 .welcome {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2em;
+    padding-bottom: .75em;
 }
 
-.welcome button {
+.welcome .menu {
     background: transparent;
     border: none;
 }
@@ -198,9 +198,16 @@ button {
     gap: 1.75em;
 }
 
-.profile_pic{
+.profile_pic {
+    width: 3em;
+    aspect-ratio: 1 / 1;
     background: #5C9CE5;
     border-radius: .75em;
+    border: none;
+}
+
+.profile_pic img {
+    height: 70%;
 }
 
 .temperature_graph {
@@ -238,7 +245,7 @@ button {
 .temperature_graph .labels {
     display: flex;
     justify-content: space-between;
-    padding-block: 2em;
+    padding-block: 1.75em;
 }
 
 .temperature_graph .labels div {
@@ -257,22 +264,202 @@ button {
 }
 
 .mychart div {
-    width: 99%;
-    padding-right: .5em;
+    width: 100%;
 }
 
 .more_details {
-    padding-block: 1.75em;
+    padding-block: 1.25rem;
 }
 
-.weather_detials {
+.weather_details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75em;
 }
 
 .details_row {
     display: flex;
     justify-content: space-between;
+    gap: 1.75em;
 }
 
-.details_row div {
+.details_card {
     background-color: #fff;
+    width: 100%;
+    border-radius: 1.75em;
+    padding: .75em 1.75em;
+    font-weight: 300;
+}
+
+.details_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.details_icon {
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #5C9CE5;
+    border-radius: 0.5em;
+}
+
+.details_icon img {
+    position: absolute;
+    height: 70%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding-block: 0.75em;
+}
+
+.details_bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.details_bar > * {
+    width: 100%;
+}
+
+.details_bar p {
+    color: #c0c0c0;
+}
+
+.details_card .bar {
+    height: 1em;
+    background-color: #d9d9d9;
+    border-radius: 2em;
+}
+
+.rain {
+    gap: .4em;
+}
+
+.uv {
+    gap: .7em;
+}
+
+.feels_like {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wind_meter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.wind_meter .meter {
+    width: 70%;
+    background-color: #d9d9d9;
+    
+    background-image: linear-gradient(65deg, transparent 50%, #d9d9d9 50%),
+                        linear-gradient(50deg, #5C9CE5 50%, transparent 50%)
+}
+
+.meter_needle {
+    position: absolute;
+    height: 45%;
+    bottom: 2em;
+
+    transform-origin: bottom center;
+    transform: rotateZ(-30deg) translateY(10%);
+}
+
+.meter_speed {
+    position: absolute;
+    bottom: 0;
+}
+
+.wet_0 {
+    background-image: linear-gradient(90deg, #5C9CE5 100%, transparent 0%)
+}
+
+.wet_1 {
+    background-image: linear-gradient(90deg, #5C9CE5 100%, transparent 0%)
+}
+
+.wet_2 {
+    background-image: linear-gradient(90deg, #5C9CE5 27.3%, transparent 0%)
+}
+
+
+.rain_0 {
+    background-image: linear-gradient(90deg, #5C9CE5 100%, transparent 0%)
+}
+
+.rain_1 {
+    background-image: linear-gradient(90deg, #5C9CE5 70%, transparent 0%)
+}
+
+.rain_2 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_3 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_4 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_5 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_6 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_7 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_8 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.rain_9 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.uv_0 {
+    background-image: linear-gradient(90deg, #5C9CE5 100%, transparent 0%)
+}
+
+.uv_1 {
+    background-image: linear-gradient(90deg, #5C9CE5 50%, transparent 0%)
+}
+
+.uv_2 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.uv_3 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.uv_4 {
+    background-image: linear-gradient(90deg, #5C9CE5 0%, transparent 0%)
+}
+
+.temp_0 {
+    background-image: linear-gradient(90deg, #5C9CE5 67%, transparent 0%)
+}
+
+.chance_0 {
+    background-image: linear-gradient(90deg, #5C9CE5 42%, transparent 0%)
 }

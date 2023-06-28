@@ -12,8 +12,8 @@
 </head>
 <body>
     <main>
-        <div class="buildings"><img src="images/buildings.png" alt="buildings"></div>
         <div class="overview">
+            <div class="buildings"><img src="images/buildings.png" alt="buildings"></div>
             <div class="mini_menu">
                 <button class="add_city" type="button"><img src="images/add_box.png" alt=""></button>
                 <div class="city_slider">
@@ -51,12 +51,12 @@
         <div class="dashboard">
             <div class="welcome">
                 <div class="message">
-                    <h2>Welcome back Isabella!</h2>
+                    <h3>Welcome back Isabella!</h3>
                     <p>Check out today's weather information</p>
                 </div>
                 <div class="profile">
-                    <button type="button"><img src="images/menu.png" alt=""></button>
-                    <button><img src="images/profile.png" alt="" class="profile_pic"></button>
+                    <button type="button" class="menu"><img src="images/menu.png" alt=""></button>
+                    <button class="profile_pic"><img src="images/profile.png" alt=""></button>
                 </div>
             </div>
             <div class="temperature_graph">
@@ -81,17 +81,70 @@
                     <div><canvas id="myChart"></canvas></div>
                 </div>
             </div>
-            <h2 class="more_details">More details of today's weather</h2>
+            <h3 class="more_details">More details of today's weather</h3>
             <div class="weather_details">
                 <div class="details_row">
-                    <div>hey</div>
-                    <div>hey</div>
-                    <div>hey</div>
+                    <div class="details_card">
+                        <div class="details_header"><p>Humidity</p><div class="details_icon"><img src="images/drops.png" alt=""></div></div>
+                        <div class="details_content"><h2>82%</h2><p>bad</p></div>
+                        <div class="details_bar">
+                            <div><p>good</p><div class="bar wet_0"></div></div>
+                            <div><p>normal</p><div class="bar wet_1"></div></div>
+                            <div><p>bad</p><div class="bar wet_2"></div></div>
+                        </div>
+                    </div>
+                    <div class="details_card">
+                        <div class="details_header"><p>Wind</p><div class="details_icon"><img src="images/wind.png" alt=""></div></div>
+                        <div class="wind_meter">
+                            <img class="meter" src="images/speedometer.png" alt="">
+                            <img class="meter_needle" src="images/pointer.png" alt="">
+                            <h2 class="meter_speed">8 km/h</h2>
+                        </div>
+                    </div>
+                    <div class="details_card">
+                        <div class="details_header"><p>Precipitation</p><div class="details_icon"><img src="images/rain.png" alt=""></div></div>
+                        <div class="details_content"><h2>1.4 cm</h2></div>
+                        <div class="details_bar rain">
+                            <div><p>0</p><div class="bar rain_0"></div></div>
+                            <div><p>10</p><div class="bar rain_1"></div></div>
+                            <div><p>20</p><div class="bar rain_2"></div></div>
+                            <div><p>30</p><div class="bar rain_3"></div></div>
+                            <div><p>40</p><div class="bar rain_4"></div></div>
+                            <div><p>50</p><div class="bar rain_5"></div></div>
+                            <div><p>60</p><div class="bar rain_6"></div></div>
+                            <div><p>70</p><div class="bar rain_7"></div></div>
+                            <div><p>80</p><div class="bar rain_8"></div></div>
+                            <div><p>90</p><div class="bar rain_9"></div></div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="details_row">
-                    <div>hey</div>
-                    <div>hey</div>
-                    <div>hey</div>
+                    <div class="details_card">
+                        <div class="details_header"><p>UV index</p><div class="details_icon"><img src="images/sun.png" alt=""></div></div>
+                        <div class="details_content"><h2>4</h2><p>medium</p></div>
+                        <div class="details_bar uv">
+                            <div><p>0-2</p><div class="bar uv_0"></div></div>
+                            <div><p>3-5</p><div class="bar uv_1"></div></div>
+                            <div><p>6-7</p><div class="bar uv_2"></div></div>
+                            <div><p>8-10</p><div class="bar uv_3"></div></div>
+                            <div><p>11+</p><div class="bar uv_4"></div></div>
+                        </div>
+                    </div>
+                    <div class="details_card">
+                        <div class="details_header"><p>Feels like</p><div class="details_icon"><img src="images/termometer.png" alt=""></div></div>
+                        <div class="details_content"><h2>4</h2><p>medium</p></div>
+                        <div class="details_bar">
+                            <div><div class="feels_like"><p>0°</p><p>25°</p><p>50°</p></div><div class="bar temp_0"></div></div>
+                        </div>
+                    </div>
+                    <div class="details_card">
+                        <div class="details_header"><p>Chance of rain</p><div class="details_icon"><img src="images/umbrella.png" alt=""></div></div>
+                        <div class="details_content"><h2>42%</h2></div>
+                        <div class="details_bar">
+                            <div><div class="feels_like"><p>0°</p><p>25°</p><p>50°</p><p>75°</p><p>100°</p></div><div class="bar chance_0"></div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
