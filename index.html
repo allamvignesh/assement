@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js" defer></script>
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -54,6 +57,41 @@
                 <div class="profile">
                     <button type="button"><img src="images/menu.png" alt=""></button>
                     <button><img src="images/profile.png" alt="" class="profile_pic"></button>
+                </div>
+            </div>
+            <div class="temperature_graph">
+                <div class="header">
+                    <p>Upcoming hours</p>
+                    <div>
+                        <button>Rain precipitation <img src="images/darrow.png" alt=""></button>
+                        <button>Next days <img src="images/rarrowb.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="labels">
+                    <div><p>Now</p><img src="images/sunb.png" alt="">27°</div>
+                    <div><p>11:00</p><img src="images/sunb.png" alt="">28°</div>
+                    <div><p>12:00</p><img src="images/cloud.png" alt="">28°</div>
+                    <div><p>13:00</p><img src="images/cloud.png" alt="">29°</div>
+                    <div><p>14:00</p><img src="images/sunb.png" alt="">30°</div>
+                    <div><p>15:00</p><img src="images/cloud.png" alt="">29°</div>
+                    <div><p>16:00</p><img src="images/cloud.png" alt="">29°</div>
+                    <div><p>17:00</p><img src="images/sunb.png" alt="">28°</div>
+                </div>
+                <div class="mychart">
+                    <div><canvas id="myChart"></canvas></div>
+                </div>
+            </div>
+            <h2 class="more_details">More details of today's weather</h2>
+            <div class="weather_details">
+                <div class="details_row">
+                    <div>hey</div>
+                    <div>hey</div>
+                    <div>hey</div>
+                </div>
+                <div class="details_row">
+                    <div>hey</div>
+                    <div>hey</div>
+                    <div>hey</div>
                 </div>
             </div>
         </div>
