@@ -130,6 +130,11 @@ button {
     left: 100%;
 }
 
+.cities {
+    position: relative;
+}
+
+
 .location {
     padding-block: 2em;
 }
@@ -151,9 +156,8 @@ button {
 }
 
 .temperature {
-    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -162,10 +166,21 @@ button {
     font-size: 4em;
 }
 
-.temperature button {
+#next_city,
+#prev_city {
+    position: absolute;
     background: transparent;
     border: none;
-    
+    top: 12em;
+    z-index: 100;
+}
+
+#next_city {
+    right: 0;
+}
+
+#prev_city {
+    left: 0;
 }
 
 .temperature p {
@@ -462,4 +477,23 @@ button {
 
 .chance_0 {
     background-image: linear-gradient(90deg, #5C9CE5 42%, transparent 0%)
+}
+
+
+.city {
+    position: absolute;
+    width: 100%;
+    transition: 400ms;
+}
+
+.city:not(.active){
+    opacity: 0;
+}
+
+.city.done {
+    transform: translateX(-100%);
+}
+
+.city.soon {
+    transform: translateX(100%)
 }
