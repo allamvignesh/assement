@@ -287,14 +287,8 @@ button {
 }
 
 .weather_details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75em;
-}
-
-.details_row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75em;
 }
 
